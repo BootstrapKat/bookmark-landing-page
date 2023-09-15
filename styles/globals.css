@@ -1,1 +1,18 @@
+body {
+  font-family: "Rubik", sans-serif;
+}
 
+/* responsiveMargins.module.css */
+
+.margin {
+  margin-left: calc(10vw);
+  margin-right: calc(10vw);
+}
+
+/* Smaller screens */
+@media (max-width: 1024px) {
+  .margin {
+    margin-left: calc(5vw);
+    margin-right: calc(5vw);
+  }
+}

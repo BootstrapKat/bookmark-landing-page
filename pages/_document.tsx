@@ -1,10 +1,17 @@
+// Affects the whole site (one-time setup, rarely changes)
+
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>{/* Add meta tags, link to stylesheet, etc. here */}</Head>
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />

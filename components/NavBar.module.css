@@ -1,0 +1,116 @@
+/* NavBar.module.css */
+.navContainer {
+  color: hsl(229, 31%, 21%);
+  margin-top: 75px;
+  letter-spacing: 1.5px;
+}
+.navFlex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  align-items: center;
+}
+.navWrapper {
+  display: flex;
+  text-transform: uppercase;
+  align-items: center;
+}
+.navBtn {
+  cursor: pointer;
+  margin-left: 10px;
+  background-color: hsl(0, 94%, 66%);
+  color: white;
+  width: 90px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navItem {
+  cursor: pointer;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+/* Show hamburger menu button only on medium and small screens */
+.menuToggle {
+  display: none;
+}
+
+/* Hides the normal navigation menu when the screen size is less than 768px */
+@media screen and (max-width: 768px) {
+  .navWrapper {
+    display: none;
+  }
+  .menuToggle {
+    display: flex;
+    height: auto;
+  }
+
+  .menuToggle img {
+    height: 15px;
+    width: 18px;
+  }
+}
+
+/* Styles for mobile menu when opened */
+.mobileMenu {
+  display: none;
+  flex-direction: column;
+  background-color: hsl(229, 31%, 21%);
+  width: 100%;
+  position: fixed;
+  color: white;
+  text-transform: uppercase;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  align-items: center;
+  padding-top: 90px;
+}
+
+.mobileMenuItem {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.214);
+  padding: 20px;
+  text-align: center;
+  width: 75%;
+}
+
+.mobileMenuItem:nth-child(2) {
+  border-top: 1px solid rgba(255, 255, 255, 0.214);
+}
+
+.mobileMenuItem:last-child {
+  border-bottom: none;
+}
+
+.mobileMenuItem.navBtn {
+  border: 2px solid white;
+  background-color: transparent;
+  height: 10px;
+  margin-top: 25px;
+  margin-left: 0;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+/* Show mobile menu when opened */
+.mobileMenu.open {
+  display: flex;
+}
+
+.closeIcon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  position: absolute;
+  top: 25px;
+}
