@@ -1,3 +1,24 @@
-.heading {
-  color: red;
+.hero {
+  display: flex;
+  align-items: center;
+  margin-top: 75px;
+  justify-content: space-between;
+  margin-right: -115px;
+}
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+.heroBg {
+  width: 600px;
+  height: 360px;
+  background-color: hsl(231, 69%, 60%);
+  border-top-left-radius: 50% 200px;
+  border-bottom-left-radius: 50% 300px;
+  position: absolute;
+  right: 0;
+  top: 340px;
+  z-index: -99;
 }
