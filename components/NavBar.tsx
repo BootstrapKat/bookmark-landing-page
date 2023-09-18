@@ -2,7 +2,8 @@
 import styles from "./NavBar.module.css";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import SocialMediaShare from "./SocialMedia/SocialMediaShare";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -18,6 +19,11 @@ const NavBar = () => {
     { name: "Pricing", route: "/dashboard" },
     { name: "Contact", route: "/" },
     { name: "Login", route: "#", type: "modal", customClass: "navBtn" },
+  ];
+
+  const mediaList = [
+    { name: "Facebook", url: "https://www.facebook.com/", fill: "#FFF" },
+    { name: "Twitter", url: "https://twitter.com/", fill: "#FFF" },
   ];
 
   const toggleMenu = () => {
@@ -89,48 +95,53 @@ const NavBar = () => {
           menuOpen ? `${styles.mobileMenu} ${styles.open}` : styles.mobileMenu
         }
       >
-        <div className={styles.topBar}>
-          <Image
-            src="/logo-bookmark-white.svg"
-            alt="Bookmark Logo"
-            width={150}
-            height={24}
-            priority
-          />
-          {/* Close icon */}
-          {menuOpen && (
-            <div className={styles.closeIcon} onClick={toggleMenu}>
-              X
-            </div>
-          )}
-        </div>
-        {routes.map((item, index) => {
-          if (item.type === "modal") {
+        <div className={styles.navList}>
+          <div className={styles.topBar}>
+            <Image
+              src="/logo-bookmark-white.svg"
+              alt="Bookmark Logo"
+              width={150}
+              height={24}
+              priority
+            />
+            {/* Close icon */}
+            {menuOpen && (
+              <div className={styles.closeIcon} onClick={toggleMenu}>
+                X
+              </div>
+            )}
+          </div>
+          {routes.map((item, index) => {
+            if (item.type === "modal") {
+              return (
+                <div
+                  key={index}
+                  className={`${styles.mobileMenuItem} ${
+                    styles[item.customClass ?? ""]
+                  }`}
+                  onClick={handleModalOpen}
+                >
+                  {item.name}
+                </div>
+              );
+            }
             return (
               <div
                 key={index}
-                className={`${styles.mobileMenuItem} ${
-                  styles[item.customClass ?? ""]
-                }`}
-                onClick={handleModalOpen}
+                className={styles.mobileMenuItem}
+                onClick={() => {
+                  navigateTo(item.route);
+                  setMenuOpen(false); // Close menu when an item is clicked
+                }}
               >
                 {item.name}
               </div>
             );
-          }
-          return (
-            <div
-              key={index}
-              className={styles.mobileMenuItem}
-              onClick={() => {
-                navigateTo(item.route);
-                setMenuOpen(false); // Close menu when an item is clicked
-              }}
-            >
-              {item.name}
-            </div>
-          );
-        })}
+          })}
+        </div>
+        <div className={styles.socialMedia}>
+          <SocialMediaShare mediaList={mediaList} />
+        </div>
       </div>
     </div>
   );

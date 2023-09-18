@@ -1,0 +1,7 @@
+.socialMediaShare {
+  display: flex;
+  align-items: center;
+  width: 115px;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
