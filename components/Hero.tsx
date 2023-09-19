@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <>
+    <div className={styles.heroWrapper}>
       <div className={styles.hero}>
         <div className={styles.heroContent}>
           <h1 className={styles.heading}>A Simple Bookmark Manager</h1>
@@ -17,16 +17,21 @@ const Hero = () => {
             <button className={styles.lightBtn}>Get it on Firefox</button>
           </div>
         </div>
-        <Image
-          src="/illustration-hero.svg"
-          alt="Bookermark Illustration Hero"
-          height={500}
-          width={700}
-          priority
-        />
+        <div className={styles.heroImages}>
+          <div className={styles.heroImage}>
+            <Image
+              src="/illustration-hero.svg"
+              alt="Bookermark Illustration Hero"
+              height={500}
+              width={700}
+              layout="responsive"
+              priority
+            />
+          </div>
+        </div>
       </div>
       <div className={styles.heroBg}></div>
-    </>
+    </div>
   );
 };
 

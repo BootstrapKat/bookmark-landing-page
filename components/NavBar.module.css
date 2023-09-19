@@ -1,8 +1,18 @@
 /* NavBar.module.css */
 .navContainer {
+  margin-left: calc(15vw);
+  margin-right: calc(15vw);
   color: hsl(229, 31%, 21%);
   margin-top: 75px;
   letter-spacing: 1.5px;
+}
+
+/* Smaller screens */
+@media (max-width: 1024px) {
+  .navContainer {
+    margin-left: calc(5vw);
+    margin-right: calc(5vw);
+  }
 }
 .navFlex {
   display: flex;

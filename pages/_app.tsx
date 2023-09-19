@@ -7,7 +7,7 @@ import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className="margin">
+    <div>
       <Head>
         <title>Bookmark Landing Page</title>
       </Head>
