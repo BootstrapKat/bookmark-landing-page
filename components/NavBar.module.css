@@ -38,10 +38,18 @@
   border-radius: 6px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
+.navBtn:hover {
+  background-color: #fff;
+  color: hsl(0, 94%, 66%);
+  outline: 2px solid hsl(0, 94%, 66%);
+}
 .navItem {
   cursor: pointer;
   padding-left: 25px;
   padding-right: 25px;
+}
+.navItem:hover {
+  color: hsl(0, 94%, 66%);
 }
 
 /* Show hamburger menu button only on medium and small screens */

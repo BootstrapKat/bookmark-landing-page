@@ -3,7 +3,7 @@
 }
 
 .heroContent {
-  width: 30vw;
+  width: 35vw;
 }
 
 .heading {
@@ -14,11 +14,13 @@
 
 .heroBody {
   color: hsl(229, 8%, 60%);
+  line-height: 1.6;
+  font-size: 18px;
 }
 
 .heroBg {
   width: 35vw;
-  height: 20vw;
+  height: 24vw;
   background-color: hsl(231, 69%, 60%);
   border-top-left-radius: 50% 200px;
   border-bottom-left-radius: 50% 300px;

@@ -16,3 +16,40 @@ body {
     margin-right: calc(5vw);
   }
 }
+
+.darkBtn {
+  font-family: "Rubik", sans-serif;
+  background-color: hsl(231, 69%, 60%);
+  color: #fff;
+  font-weight: 500;
+  padding: 12px 24px;
+  margin: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.darkBtn:hover {
+  background-color: #fff;
+  outline: 2px solid hsl(231, 69%, 60%);
+  color: hsl(231, 69%, 60%);
+}
+
+.lightBtn {
+  font-family: "Rubik", sans-serif;
+  background-color: #f7f7f7;
+  color: hsl(229, 31%, 21%);
+  font-weight: 500;
+  padding: 12px 24px;
+  margin: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lightBtn:hover {
+  outline: 2px solid hsl(229, 31%, 21%);
+  background-color: #fff;
+}

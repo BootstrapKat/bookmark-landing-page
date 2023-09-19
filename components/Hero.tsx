@@ -13,8 +13,8 @@ const Hero = () => {
             free.
           </p>
           <div className={styles.ctas}>
-            <button className={styles.darkBtn}>Get it on Chrome</button>
-            <button className={styles.lightBtn}>Get it on Firefox</button>
+            <button className="darkBtn">Get it on Chrome</button>
+            <button className="lightBtn">Get it on Firefox</button>
           </div>
         </div>
         <div className={styles.heroImages}>
