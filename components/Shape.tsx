@@ -1,6 +1,12 @@
 import styles from "./Shape.module.css";
 import { useWindowSize } from "../hooks/useWindowSize";
 
+/**
+ * This is a very over engineered shape component. You have to
+ * supply width and height properties and various other styles
+ * for desktop and mobile screen sizes.
+ */
+
 interface ShapeProps {
   position: "left" | "right";
   borderTopLeftRadius?: string;

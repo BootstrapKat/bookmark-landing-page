@@ -59,7 +59,6 @@ const Hero = () => {
           mobileTop="20vw"
         />
       </div>
-      {/* <div className={styles.heroBg}></div> */}
     </div>
   );
 };
