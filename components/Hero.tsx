@@ -1,6 +1,7 @@
 import styles from "./Hero.module.css";
 import Image from "next/image";
 import Button from "./Button";
+import Shape from "./Shape";
 
 const Hero = () => {
   const handleClick = () => {
@@ -44,7 +45,21 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className={styles.heroBg}></div>
+      <div className="heroBg">
+        <Shape
+          position="right"
+          borderTopLeftRadius="50% 200px"
+          borderBottomLeftRadius="50% 300px"
+          color="hsl(231, 69%, 60%)"
+          desktopWidth="35vw"
+          desktopHeight="24vw"
+          mobileWidth="70vw"
+          mobileHeight="50vw"
+          desktopTop="155px"
+          mobileTop="20vw"
+        />
+      </div>
+      {/* <div className={styles.heroBg}></div> */}
     </div>
   );
 };

@@ -18,7 +18,7 @@
   font-size: 18px;
 }
 
-.heroBg {
+/* .heroBg {
   width: 35vw;
   height: 24vw;
   background-color: hsl(231, 69%, 60%);
@@ -28,7 +28,9 @@
   right: 0;
   top: 155px;
   z-index: -99;
-}
+  max-width: 620px;
+  max-height: 350px;
+} */
 
 .hero {
   display: flex;
@@ -40,7 +42,7 @@
 }
 .ctas {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 @media only screen and (max-width: 768px) {
@@ -52,7 +54,7 @@
   .heroImages {
     order: -1;
   }
-  .heroBg {
+  .heroBg .shape {
     top: 20vw;
     width: 70vw;
     height: 50vw;
@@ -69,6 +71,9 @@
     margin-left: 55px;
     margin-right: 55px;
     line-height: 1.6;
+  }
+  .ctas {
+    justify-content: center;
   }
 }
 
