@@ -1,7 +1,12 @@
 import styles from "./Hero.module.css";
 import Image from "next/image";
+import Button from "./Button";
 
 const Hero = () => {
+  const handleClick = () => {
+    alert("Button clicked!");
+  };
+
   return (
     <div className={styles.heroWrapper}>
       <div className={styles.hero}>
@@ -13,8 +18,17 @@ const Hero = () => {
             free.
           </p>
           <div className={styles.ctas}>
-            <button className="darkBtn">Get it on Chrome</button>
-            <button className="lightBtn">Get it on Firefox</button>
+            <Button
+              variant="dark"
+              text="Get it on Chrome"
+              link="https://www.google.com"
+              isExternal={true}
+            />
+            <Button
+              variant="light"
+              text="Get it on Firefox"
+              onClick={handleClick}
+            />
           </div>
         </div>
         <div className={styles.heroImages}>

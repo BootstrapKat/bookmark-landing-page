@@ -1,0 +1,53 @@
+/* Common styles */
+.button {
+  font-family: "Rubik", sans-serif;
+  padding: 12px 24px;
+  margin: 8px;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0px 2px 4px hsla(0, 0%, 0%, 0.1);
+}
+
+/* Dark variant */
+.button.dark {
+  background-color: hsl(231, 69%, 60%);
+  color: hsl(0, 0%, 100%);
+}
+
+.button.dark:hover {
+  background-color: hsl(0, 0%, 100%);
+  outline: 2px solid hsl(231, 69%, 60%);
+  color: hsl(231, 69%, 60%);
+}
+
+/* Light variant */
+.button.light {
+  background-color: hsl(0, 0%, 97%);
+  color: hsl(229, 31%, 21%);
+}
+
+.button.light:hover {
+  outline: 2px solid hsl(229, 31%, 21%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+/* Special variant */
+.button.special {
+  background-color: hsl(0, 94%, 66%);
+  color: hsl(0, 0%, 100%);
+}
+
+.button.special:hover {
+  background-color: #fff;
+  color: hsl(0, 94%, 66%);
+  outline: 2px solid hsl(0, 94%, 66%);
+}
+
+/* Focus state */
+.button:focus {
+  outline: 3px solid hsl(0, 94%, 66%);
+}
